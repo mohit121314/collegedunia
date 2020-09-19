@@ -1,0 +1,267 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --promoted-ribbon-bg: #68a7ff;
+  --rating-column-bg: #f5a626;
+  --discount-ribbon-bg: #dd1c26;
+  --primary-font-color: #444444;
+  --secondary-font-color: #ffffff;
+  --discount-details-bg: #ccf5e7;
+}
+.main .mainhead h1 {
+  padding: 0.75rem;
+  font-weight: 500;
+  font-size: 1rem;
+  text-transform: capitalize;
+  font-family: proxima-nova, sans-serif;
+  color: var(--primary-font-color);
+}
+.subDiv {
+  font-size: 16px;
+  font-family: proxima-nova, sans-serif;
+  padding: 28px 0.875rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+  height: 100%;
+  color: var(--primary-font-color);
+}
+.college-card-container {
+  display: grid;
+  grid-template-rows: 60% 40%;
+  height: 400px;
+  border-radius: 3px;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.22);
+  width: 650px;
+  position: relative;
+  margin-bottom: 28px;
+}
+.college-card-container > .promoted-ribbon {
+  text-transform: uppercase;
+  background-color: var(--promoted-ribbon-bg);
+  color: #fff;
+  font-size: 0.875rem;
+  position: absolute;
+  top: -18px;
+  right: 0;
+  height: 14px;
+  padding: 12px 0.75rem;
+  line-height: 14px;
+  z-index: 999;
+}
+.college-card-container > .promoted-ribbon::before {
+  content: "";
+  display: block;
+  width: 0px;
+  height: 0px;
+  border-top: 19px solid var(--promoted-ribbon-bg);
+  border-bottom: 19px solid var(--promoted-ribbon-bg);
+  border-left: 12px solid transparent;
+  border-right: 5px solid var(--promoted-ribbon-bg);
+  position: absolute;
+  left: -13px;
+  top: 0;
+  z-index: 999;
+}
+.college-card-container > .miscellaneous-details {
+  position: relative;
+}
+.miscellaneous-details .details-wrapper {
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.details-wrapper .rating-status-outer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 32px;
+  margin-right: 12px;
+}
+.rating-status-outer .rating-status-inner {
+  color: var(--secondary-font-color);
+  background-color: var(--rating-column-bg);
+  border-radius: 5px;
+  padding: 12px 0.75rem;
+}
+.rating-status-inner span {
+  display: block;
+  text-align: center;
+}
+.rating-status-inner span b {
+  font-size: 1.3rem;
+}
+.details-wrapper .rating-summary-outer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.rating-summary-outer .right {
+  color: var(--secondary-font-color);
+  font-size: 0.875rem;
+  margin-right: 0.75rem;
+}
+.rating-summary-outer .left {
+  display: flex;
+  margin-bottom: 12px;
+}
+.rating-summary-outer .left span {
+  border-radius: 25px;
+  padding: 8px 0.75rem;
+  display: block;
+  background-color: var(--secondary-font-color);
+  height: 18px;
+  line-height: 18px;
+  margin-left: 0.75rem;
+  font-size: 0.875rem;
+}
+.college-card-container > .miscellaneous-details img {
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  width: 100%;
+  height: 100%;
+}
+.college-card-container > .critical-details {
+  /* padding: 12px 0.75rem; */
+  display: flex;
+  justify-content: space-between;
+}
+.critical-details hgroup.left-content h1,
+.critical-details hgroup.left-content h2,
+.critical-details hgroup.left-content h3 {
+  margin-left: 0.75rem;
+}
+.critical-details hgroup.left-content span.college-name {
+  font-size: 1.2rem;
+  font-weight: 400;
+  text-transform: capitalize;
+  margin-right: 0.5rem;
+}
+.critical-details hgroup.left-content span.college-rating i.fa {
+  font-size: 1rem;
+  vertical-align: middle;
+}
+.critical-details hgroup.left-content span.college-landmark,
+.critical-details hgroup.left-content span.info-separator {
+  text-transform: capitalize;
+  color: #333333;
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+.critical-details hgroup.left-content span.college-reachable {
+  color: #929292;
+  font-weight: 400;
+  font-size: 0.875rem;
+}
+.critical-details hgroup.left-content span.matched-rate {
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #05b6a9;
+}
+.critical-details hgroup.left-content span.address-kms,
+.critical-details hgroup.left-content span.address-kms2 {
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #333333;
+}
+.critical-details hgroup.left-content span.address-region,
+.critical-details hgroup.left-content span.address-region2 {
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #929292;
+}
+.critical-details hgroup.left-content h3 {
+  margin-top: 12px;
+}
+.critical-details hgroup.left-content h4 {
+  background-color: var(--discount-details-bg);
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  height: 30px;
+  font-size: 0.875rem;
+  line-height: 30px;
+  padding-left: 0.75rem;
+  font-weight: 400;
+  margin-top: 8px;
+}
+hgroup.left-content h4 .login-link {
+  cursor: pointer;
+  color: #05b6a9;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+hgroup.left-content span.price-numerics {
+  color: #05b6a9;
+}
+.critical-details div.right-content {
+  margin-right: 0.75rem;
+  margin-top: 5px;
+}
+.critical-details div.right-content span {
+  display: block;
+  text-align: right;
+}
+.critical-details div.right-content span:last-child {
+  margin-top: 48px;
+}
+.critical-details div.right-content span > span {
+  display: inline;
+  font-size: 0.875rem;
+  color: #05b6a9;
+  font-weight: 600;
+}
+.critical-details div.right-content span > i {
+  font-size: 0.3rem;
+  color: #05b6a9;
+  vertical-align: middle;
+  margin: 0 0.2rem;
+}
+div.right-content span.mrp > b {
+  font-size: 0.78rem;
+  text-decoration: line-through;
+  color: #727272;
+  margin-right: 0.5rem;
+}
+div.right-content span.mrp > small.discount-ribbon {
+  background-color: var(--discount-ribbon-bg);
+  padding: 2px 0.3rem;
+  background-color: var(--discount-ribbon-bg);
+  padding: 2px 0.2rem;
+  display: inline;
+  color: var(--secondary-font-color);
+  text-decoration: none;
+  position: relative;
+}
+small.discount-ribbon > i {
+  font-size: 0.3rem;
+  vertical-align: middle;
+}
+small.discount-ribbon::before {
+  content: "";
+  position: absolute;
+  left: -16px;
+  top: 0;
+  border-bottom: 9px solid transparent;
+  border-top: 9px solid transparent;
+  border-left: 8px solid transparent;
+  border-right: 8px solid var(--discount-ribbon-bg);
+  width: 0;
+  height: 0;
+}
+div.right-content span.discounted-price {
+  color: var(--discount-ribbon-bg);
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+div.right-content span.sem-division {
+  color: #727272;
+  font-size: 0.78rem;
+}
